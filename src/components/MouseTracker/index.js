@@ -1,25 +1,46 @@
 import React, { Component } from 'react';
 
-class MouseTracker extends Component {
+class MouseWithCat extends Component {
   state = {
-    xPos: 0,
-    yPos: 0,
+    x: 0,
+    y: 0,
   }
 
   onMouseMoveHandler = (e) => {
     this.setState({
-      xPos: e.clientX,
-      yPos: e.clientY,
+      x: e.clientX,
+      y: e.clientY,
     })
   }
 
   render() {
     return (
       <div onMouseMove={this.onMouseMoveHandler}>
-        <p>X Position is: {this.state.xPos}</p>
-        <p>Y Position is: {this.state.yPos}</p>
+        <Cat mouse={this.state} />
       </div>
     );
+  }
+}
+
+class MouseTracker extends Component {
+  render() {
+    return (
+      <React.Fragment>
+        <h1>Mouse your mouse around:</h1>
+        <MouseWithCat />
+      </React.Fragment>
+    )
+  }
+}
+
+
+class Cat extends Component {
+  render() {
+    return (
+      <React.Fragment>
+        <img src="https://images.pexels.com/photos/20787/pexels-photo.jpg?auto=compress&cs=tinysrgb&h=350" style={{ position: 'absolute', left: this.props.mouse.x, top: this.props.mouse.y }} />
+      </React.Fragment>
+    )
   }
 }
 
