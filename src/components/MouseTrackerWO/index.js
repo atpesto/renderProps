@@ -38,7 +38,7 @@ class Cat extends Component {
   render() {
     return (
       <React.Fragment>
-        <img src="https://images.pexels.com/photos/20787/pexels-photo.jpg?auto=compress&cs=tinysrgb&h=350" style={{ position: 'absolute', left: this.props.mouse.x, top: this.props.mouse.y }} />
+        <img alt="cat" src="https://images.pexels.com/photos/20787/pexels-photo.jpg?auto=compress&cs=tinysrgb&h=350" style={{ position: 'absolute', left: this.props.mouse.x, top: this.props.mouse.y }} />
       </React.Fragment>
     )
   }
