@@ -15,7 +15,7 @@ class MouseWithCat extends Component {
 
   render() {
     return (
-      <div onMouseMove={this.onMouseMoveHandler}>
+      <div style={{ height: '100%' }}onMouseMove={this.onMouseMoveHandler}>
         <Cat mouse={this.state} />
       </div>
     );

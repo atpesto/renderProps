@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import MouseTracker from './components/MouseTracker';
+import MouseTrackerWO from './components/MouseTrackerWO';
+import MouseTrackerW from './components/MouseTrackerW';
 
 
 class App extends Component {
   render() {
     return (
-      <MouseTracker />
+      <MouseTrackerW />
     );
   }
 }
